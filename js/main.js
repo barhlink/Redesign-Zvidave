@@ -170,18 +170,13 @@
   renderGame();
 
   /* ---------- game catalogue + filters ---------- */
-  var ALL_GAMES = [
-    { title: "Vrstvička", subject: "Informatika", grade: "2.–5. tř.", state: "BETA", href: "https://zvidave.cz/cs/hry/vrstvicka.html", img: "assets/ill/koala-3dtisk.png", tint: "#DCF0EA", tagBg: "#DCF0EA", tagFg: "#26706A", stateColor: "#2E9187" },
-    { title: "Zlomková zoo 1", subject: "Matematika", grade: "5. tř.", state: "v přípravě", href: "#hry", img: "assets/ill/plamenak-tanci.png", tint: "#FBEBC6", tagBg: "#FBEBC6", tagFg: "#8A6714", stateColor: "#9C8258" },
-    { title: "Zlomková zoo 2", subject: "Matematika", grade: "5. tř.", state: "v přípravě", href: "#hry", img: "assets/ill/koala-sazenice.png", tint: "#FBE2E6", tagBg: "#FBE2E6", tagFg: "#A9546A", stateColor: "#9C8258" },
-    { title: "Připravujeme", subject: "Již brzy", grade: "—", state: "Nová hra ve výrobě.", href: "#hry", img: "assets/ill/liska-bezi.png", tint: "#EFE7DA", tagBg: "#EFE7DA", tagFg: "#7A6640", stateColor: "#9C8258" }
-  ];
+  var ALL_GAMES = window.ZV_GAMES || [];
 
   var filtersWrap = document.getElementById("zvFilters");
   var featuredEl = document.getElementById("zvFeatured");
   var emptyEl = document.getElementById("zvEmpty");
   var restGamesEl = document.getElementById("zvRestGames");
-  var currentFilter = "Vše";
+  var currentFilter = "all";
 
   function gameRowHtml(g) {
     return '<a class="zv-game-row" href="' + g.href + '">' +
@@ -195,7 +190,7 @@
   }
 
   function renderGames() {
-    var games = currentFilter === "Vše" ? ALL_GAMES : ALL_GAMES.filter(function (g) { return g.subject === currentFilter; });
+    var games = currentFilter === "all" ? ALL_GAMES : ALL_GAMES.filter(function (g) { return g.key === currentFilter; });
     var featured = games.find(function (g) { return g.title === "Vrstvička"; }) || null;
     var rest = games.filter(function (g) { return g !== featured; });
     if (featuredEl) featuredEl.hidden = !featured;

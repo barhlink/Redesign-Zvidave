@@ -94,6 +94,8 @@ button.zv-only-mobile{display:inline-flex}
 .zv-mobile-nav{position:sticky;top:64px;z-index:49;background:var(--page);border-bottom:1px solid rgba(20,81,78,.1);padding:8px 16px 16px;display:flex;flex-direction:column;gap:2px}
 .zv-mobile-nav a{padding:12px 4px;font-size:16px;font-weight:600;color:var(--teal-deep);border-bottom:1px solid rgba(20,81,78,.08)}
 .zv-mobile-nav-last{border-bottom:none !important}
+.zv-mobile-lang{display:flex;justify-content:center;gap:2px;margin-top:12px;padding:3px;border-radius:999px;background:rgba(20,81,78,.09);font-size:12px;font-weight:700;letter-spacing:.06em}
+.zv-mobile-lang a{flex:1;text-align:center;padding:8px 4px;border-radius:999px;color:#5C7D79;border-bottom:none}
 
 /* ===== header : desktop ===== */
 .zv-header-d{position:sticky;top:14px;z-index:50;padding:14px 20px 0;transition:transform .35s ease}
