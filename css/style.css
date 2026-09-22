@@ -123,7 +123,7 @@ button.zv-only-mobile{display:inline-flex}
 .zv-hero-art{position:relative;margin-top:28px}
 .zv-hero-blob{position:absolute;inset:-20px -14px -6px -16px;border-radius:58% 42% 48% 52% / 52% 46% 54% 48%;background:radial-gradient(120% 120% at 30% 20%, #B8E5DA 0%, #7FCBBE 78%);transform:rotate(-3deg)}
 .zv-hero-img{position:relative;width:100%;display:block;border-radius:80px 74px 40px 80px}
-.zv-hero-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+.zv-hero-pills{position:relative;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
 .zv-pill{display:inline-flex;align-items:center;gap:7px;border-radius:999px;background:var(--card);border:1px solid var(--border);font-weight:600;color:var(--teal-deep);padding:7px 13px;font-size:13px}
 .zv-pill img{width:20px;height:20px;object-fit:contain}
 .zv-pill-extra{display:none}
